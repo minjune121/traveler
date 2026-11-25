@@ -10,17 +10,17 @@ export default {
       colors: {
         // Primary (Bright Lilac) 스케일 — 500: primary-container, 600: primary
         brand: {
-          50: '#F5F3FF',
-          100: '#EDE9FE',
-          200: '#DDD6FE',
-          300: '#C4B5FD',
-          400: '#B49CFB',
-          500: '#A78BFA', // primary-container
-          600: '#8B5CF6', // primary
-          700: '#7C3AED', // hover / pressed
-          800: '#6D28D9',
-          900: '#5B21B6',
-          950: '#2E1065', // on-primary-container
+          50: '#FFF5FF',
+          100: '#FFE5FF',
+          200: '#FFCCFF',
+          300: '#FFB3FF',
+          400: '#FF99FF',
+          500: '#FF80FF', // primary-container
+          600: '#E64FE6', // primary
+          700: '#C935C9', // hover / pressed
+          800: '#A12AA1',
+          900: '#7F247F',
+          950: '#4A0A4A', // on-primary-container
         },
         // Secondary (Bright Yellow) 스케일
         accent: {
@@ -55,10 +55,10 @@ export default {
           variant: '#C4C6D3',
         },
         primary: {
-          DEFAULT: '#8B5CF6',
-          container: '#A78BFA',
+          DEFAULT: '#E64FE6',
+          container: '#FF80FF',
         },
-        'on-primary': { DEFAULT: '#FFFFFF', container: '#2E1065' },
+        'on-primary': { DEFAULT: '#FFFFFF', container: '#4A0A4A' },
         secondary: {
           DEFAULT: '#FACC15',
           container: '#FEF08A',
@@ -96,8 +96,8 @@ export default {
         caption: '0.6875rem',
       },
       boxShadow: {
-        card: '0 4px 20px -2px rgba(139, 92, 246, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.04)',
-        elevated: '0 10px 25px -3px rgba(139, 92, 246, 0.15)',
+        card: '0 4px 20px -2px rgba(230, 79, 230, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.04)',
+        elevated: '0 10px 25px -3px rgba(230, 79, 230, 0.15)',
       },
     },
   },
