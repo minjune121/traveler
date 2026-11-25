@@ -17,10 +17,10 @@ colors:
   primary-container: '#d580ff'
   on-primary: '#ffffff'
   on-primary-container: '#3b0a52'
-  secondary: '#facc15'
-  secondary-container: '#fef08a'
-  on-secondary: '#713f12'
-  on-secondary-container: '#854d0e'
+  secondary: '#ffe135'
+  secondary-container: '#fff38a'
+  on-secondary: '#5c4a00'
+  on-secondary-container: '#7a6300'
   tertiary: '#06b6d4'
   tertiary-container: '#cffafe'
   on-tertiary: '#ffffff'
@@ -57,11 +57,11 @@ shadows:
 ## 1. Visual Direction & Identity
 - **컨셉**: 도쿄 힐링 & 명소 투어 일정/가이드 관리 앱
 - **무드**: 쨍한 퍼플 라일락(Vivid Purple Lilac)를 메인 테마로 채택하여 세련되고 산뜻한 여행 경험 전달
-- **대비 요소**: 중요 알림 및 바우처 포인트에 선명한 옐로우(#FACC15) 악센트를 배치하고, 야간/현지 기사용 택시 카드에는 딥 다크 모드 카드 스타일 적용
+- **대비 요소**: 중요 알림 및 바우처 포인트에 맑은 레몬 옐로우(#FFE135) 악센트를 배치하고, 야간/현지 기사용 택시 카드에는 딥 다크 모드 카드 스타일 적용
 
 ## 2. Color Palette & Semantics
 - **Primary (Vivid Purple Lilac)**: `#B34FE6` / `#D580FF` — 상단 헤더, 활성 탭, 주요 인터랙티브 버튼(+ 새 일정 추가), 체크 인디케이터
-- **Secondary (Bright Yellow)**: `#FACC15` — 상단 긴급 공지 바, 바우처 액션 버튼, 중요 알림 뱃지
+- **Secondary (Clear Lemon Yellow)**: `#FFE135` — 상단 긴급 공지 바, 바우처 액션 버튼, 중요 알림 뱃지
 - **Dark Surface Accent (Taxi Flashcard)**: `#1E293B` ~ `#0F172A` — 기사용 일본어 목적지 안내 전용 고대비 카드
 - **Base Surface**: `#F8F9FF` — 맑고 깨끗한 쿨톤 화이트/라벤더 배경
 - **Status Colors**:
