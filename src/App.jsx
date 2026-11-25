@@ -7,10 +7,13 @@ import ChecklistSection from './components/ChecklistSection';
 import VoucherSection from './components/VoucherSection';
 import HotelCard from './components/HotelCard';
 import EmergencyContacts from './components/EmergencyContacts';
+import SOSModal from './components/SOSModal';
+import { Siren } from 'lucide-react';
 
 export default function App() {
   const [state, setState] = useState(() => loadState());
   const [activeMainTab, setActiveMainTab] = useState('all'); // 'all' | 'timeline' | 'checklist' | 'wallet'
+  const [isSOSOpen, setIsSOSOpen] = useState(false);
 
   // 상태 변경 시 LocalStorage에 영속화
   useEffect(() => {
@@ -72,7 +75,7 @@ export default function App() {
         />
 
         {/* 3. 메인 컨텐츠 영역 */}
-        <main className="flex-1 p-4 pb-12 overflow-y-auto">
+        <main className="flex-1 p-4 pb-24 overflow-y-auto">
           {/* 전체 탭 또는 일정 타임라인 탭 */}
           {(activeMainTab === 'all' || activeMainTab === 'timeline') && (
             <TimelineSection
@@ -99,10 +102,31 @@ export default function App() {
               <HotelCard hotelCard={state.hotelCard} />
 
               {/* 현지 비상연락처 (SOS) */}
-              <EmergencyContacts contacts={state.emergencyContacts} />
+              <EmergencyContacts
+                contacts={state.emergencyContacts}
+                onOpenSOS={() => setIsSOSOpen(true)}
+              />
             </>
           )}
         </main>
+
+        {/* 긴급 SOS 플로팅 버튼 (앱 프레임 우하단 고정) */}
+        <div className="fixed bottom-5 inset-x-0 z-40 flex justify-center pointer-events-none">
+          <div className="w-full max-w-[440px] flex justify-end px-4">
+            <button
+              onClick={() => setIsSOSOpen(true)}
+              className="pointer-events-auto w-14 h-14 rounded-full bg-status-sos hover:bg-red-600 text-white shadow-elevated ring-4 ring-red-500/20 flex flex-col items-center justify-center transition active:scale-95"
+              aria-label="긴급 SOS 열기"
+            >
+              <Siren className="w-5 h-5" />
+              <span className="text-[10px] font-extrabold leading-none mt-0.5">SOS</span>
+            </button>
+          </div>
+        </div>
+
+        {isSOSOpen && (
+          <SOSModal contacts={state.emergencyContacts} onClose={() => setIsSOSOpen(false)} />
+        )}
 
         {/* 하단 푸터 바 */}
         <footer className="py-4 text-center text-[11px] text-outline border-t border-surface-container bg-white/70">

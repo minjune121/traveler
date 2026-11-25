@@ -242,8 +242,10 @@ export const INITIAL_DATA = {
   hotelCard: {
     nameKo: "호텔 그레이스리 신주쿠",
     nameJa: "ホテルグレイスリー新宿",
+    nameEn: "Hotel Gracery Shinjuku",
     requestKo: "기사님, 호텔 그레이스리 신주쿠로 가주세요.",
     requestJa: "運転手さん、ホテルグレイスリー新宿までお願いします。",
+    requestEn: "Please take me to this hotel.",
     addressJa: "東京都新宿区歌舞伎町1-19-1",
     addressEn: "1-19-1 Kabukicho, Shinjuku-ku, Tokyo 160-8466",
     tel: "+81 3-6833-1111",

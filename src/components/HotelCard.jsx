@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Navigation, Copy, Check, Phone, Eye, X, MapPin } from 'lucide-react';
+import { Copy, Check, Phone, Eye } from 'lucide-react';
+import TaxiCardModal from './TaxiCardModal';
 
 export default function HotelCard({ hotelCard }) {
   const [copied, setCopied] = useState(false);
@@ -106,62 +107,9 @@ export default function HotelCard({ hotelCard }) {
         </div>
       </div>
 
-      {/* 기사님 보여주기 초대형 확대 모달 */}
+      {/* 기사님 보여주기: 현지어 택시 카드 모달 */}
       {isZoomModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-taxi-deep/90 backdrop-blur-md animate-fade-in">
-          <div className="w-full max-w-sm bg-white rounded-2xl p-6 shadow-elevated relative text-slate-900 flex flex-col justify-between min-h-[460px]">
-            <button
-              onClick={() => setIsZoomModalOpen(false)}
-              className="absolute top-4 right-4 p-2.5 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200"
-            >
-              <X className="w-6 h-6" />
-            </button>
-
-            <div>
-              <div className="inline-block px-3 py-1 bg-accent-400 text-slate-900 font-black text-xs rounded-full mb-3">
-                🚕 運転手さんへ (기사님께 보여주세요)
-              </div>
-
-              {/* 초대형 일본어 문구 */}
-              <div className="p-4 bg-slate-100 rounded-2xl border-2 border-slate-300 mb-4">
-                <p className="text-2xl font-black text-slate-950 leading-snug mb-2">
-                  {hotelCard.requestJa}
-                </p>
-                <p className="text-xs text-slate-500 font-medium">
-                  {hotelCard.requestKo}
-                </p>
-              </div>
-
-              {/* 호텔명 및 상세 주소 (큰 글씨) */}
-              <div className="space-y-3">
-                <div className="bg-brand-50 p-3 rounded-2xl border border-brand-200">
-                  <span className="text-[11px] font-bold text-brand-700 block">목적지 명칭</span>
-                  <p className="text-xl font-black text-slate-900">
-                    {hotelCard.nameJa}
-                  </p>
-                </div>
-
-                <div className="bg-slate-50 p-3 rounded-2xl border border-slate-200">
-                  <span className="text-[11px] font-bold text-slate-500 block">목적지 일본어 주소</span>
-                  <p className="text-base font-bold text-slate-800 leading-normal">
-                    {hotelCard.addressJa}
-                  </p>
-                </div>
-
-                <p className="text-xs text-slate-500 text-center">
-                  랜드마크: {hotelCard.landmark}
-                </p>
-              </div>
-            </div>
-
-            <button
-              onClick={() => setIsZoomModalOpen(false)}
-              className="mt-6 w-full py-3.5 bg-taxi-deep text-white rounded-xl font-bold text-sm"
-            >
-              닫기 (Close)
-            </button>
-          </div>
-        </div>
+        <TaxiCardModal hotelCard={hotelCard} onClose={() => setIsZoomModalOpen(false)} />
       )}
     </>
   );

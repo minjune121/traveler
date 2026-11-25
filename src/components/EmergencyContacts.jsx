@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ShieldAlert, PhoneCall, Copy, Check, ExternalLink } from 'lucide-react';
 
-export default function EmergencyContacts({ contacts }) {
+export default function EmergencyContacts({ contacts, onOpenSOS }) {
   const [copiedId, setCopiedId] = useState(null);
 
   const handleCopy = (id, phone) => {
@@ -22,9 +22,18 @@ export default function EmergencyContacts({ contacts }) {
             <p className="text-xs text-slate-500">인솔 가이드 및 재외공관 긴급 지원</p>
           </div>
         </div>
-        <span className="text-[11px] font-bold px-2 py-0.5 bg-red-50 text-red-600 rounded-full">
-          24시간 대응
-        </span>
+        {onOpenSOS ? (
+          <button
+            onClick={onOpenSOS}
+            className="text-xs font-extrabold px-3 py-1.5 bg-status-sos hover:bg-red-600 text-white rounded-full shadow-card transition active:scale-95"
+          >
+            SOS 모드
+          </button>
+        ) : (
+          <span className="text-[11px] font-bold px-2 py-0.5 bg-red-50 text-red-600 rounded-full">
+            24시간 대응
+          </span>
+        )}
       </div>
 
       <div className="grid grid-cols-1 gap-2.5">

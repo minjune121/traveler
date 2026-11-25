@@ -10,30 +10,30 @@ export default {
       colors: {
         // Primary (Bright Lilac) 스케일 — 500: primary-container, 600: primary
         brand: {
-          50: '#F5F3FF',
-          100: '#EDE9FE',
-          200: '#DDD6FE',
-          300: '#C4B5FD',
-          400: '#B49CFB',
-          500: '#A78BFA', // primary-container
-          600: '#8B5CF6', // primary
-          700: '#7C3AED', // hover / pressed
-          800: '#6D28D9',
-          900: '#5B21B6',
-          950: '#2E1065', // on-primary-container
+          50: '#FBF5FF',
+          100: '#F5E5FF',
+          200: '#EBCCFF',
+          300: '#E2B3FF',
+          400: '#DA99FF',
+          500: '#D580FF', // primary-container
+          600: '#B34FE6', // primary
+          700: '#9A35CC', // hover / pressed
+          800: '#7D2AA6',
+          900: '#622382',
+          950: '#3B0A52', // on-primary-container
         },
         // Secondary (Bright Yellow) 스케일
         accent: {
-          50: '#FEFCE8',
-          100: '#FEF9C3',
-          200: '#FEF08A', // secondary-container
-          300: '#FDE047',
-          400: '#FACC15', // secondary
-          500: '#EAB308',
-          600: '#CA8A04',
-          700: '#A16207',
-          800: '#854D0E', // on-secondary-container
-          900: '#713F12', // on-secondary
+          50: '#FEFDE8',
+          100: '#FFFAC2',
+          200: '#FFF38A', // secondary-container
+          300: '#FFEB5C',
+          400: '#FFE135', // secondary
+          500: '#F5CF0A',
+          600: '#D4AE00',
+          700: '#A88A00',
+          800: '#7A6300', // on-secondary-container
+          900: '#5C4A00', // on-secondary
         },
         // Material 시맨틱 토큰
         surface: {
@@ -55,15 +55,15 @@ export default {
           variant: '#C4C6D3',
         },
         primary: {
-          DEFAULT: '#8B5CF6',
-          container: '#A78BFA',
+          DEFAULT: '#B34FE6',
+          container: '#D580FF',
         },
-        'on-primary': { DEFAULT: '#FFFFFF', container: '#2E1065' },
+        'on-primary': { DEFAULT: '#FFFFFF', container: '#3B0A52' },
         secondary: {
-          DEFAULT: '#FACC15',
-          container: '#FEF08A',
+          DEFAULT: '#FFE135',
+          container: '#FFF38A',
         },
-        'on-secondary': { DEFAULT: '#713F12', container: '#854D0E' },
+        'on-secondary': { DEFAULT: '#5C4A00', container: '#7A6300' },
         tertiary: {
           DEFAULT: '#06B6D4',
           container: '#CFFAFE',
@@ -96,8 +96,8 @@ export default {
         caption: '0.6875rem',
       },
       boxShadow: {
-        card: '0 4px 20px -2px rgba(139, 92, 246, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.04)',
-        elevated: '0 10px 25px -3px rgba(139, 92, 246, 0.15)',
+        card: '0 4px 20px -2px rgba(179, 79, 230, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.04)',
+        elevated: '0 10px 25px -3px rgba(179, 79, 230, 0.15)',
       },
     },
   },
